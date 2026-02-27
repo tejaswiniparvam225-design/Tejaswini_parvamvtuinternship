@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #static{
+            position: static;
+            background-color: aqua;
+            top: 30px;
+            left: 300px;
+        }
+        #relative{
+            position: relative;
+            background-color: aqua;
+            top: 50px;
+            left: 50px;
+            width:300px;
+            height:40px;
+            border:400px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>position property:</h1>
+    <p>used to control the position of html elements</p>
+    <pre>
+        1.position:static-this is default position of all html elements(we cannot use top,left, bottom & right properties with the position)
+        2.position:relative-this will position the elements from original position
+        3.position:absolute-this will positionthe elements from the nearest position ancestor
+        4.position:fixed-it will fix the html elements
+        5.position:sticky-it will stick the html elements when we scroll the pages
+    </pre>
+    <div id="static">
+        lorem ipsum dolor sit net.
+    </div>
+    <div id="relative">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eum corrupti praesentium enim tempora. Aliquid delectus nihil, impedit nemo autem cum soluta animi vitae nam ea ab obcaecati reprehenderit a.
+
+    </div>
+</body>
+</html>

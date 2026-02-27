@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #555;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 12px 0;
+        }
+
+        form input[type="radio"],
+        form input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1a252f;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        figure {
+            width: 300px;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        figcaption {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        video, audio {
+            margin-top: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our College</h1>
+    <p>Bengaluru, Karnataka</p>
+</header>
+
+<!-- SECTION 1 -->
+<section>
+    <h2>1. Welcome / Home</h2>
+    <p><strong>Welcome!</strong> We are delighted to have you visit our college website.</p>
+    <p>Our college provides quality education with a focus on academic excellence and overall development.</p>
+
+    <h3>Vision</h3>
+    <p>To be a <strong>center of excellence</strong> in education and innovation.</p>
+
+    <h3>Mission</h3>
+    <p>To deliver <strong>quality education</strong>, promote research, and develop responsible citizens.</p>
+
+    <ul>
+        <li><strong>Quality Education</strong></li>
+        <li><strong>Experienced Faculty</strong></li>
+        <li><strong>Modern Infrastructure</strong></li>
+    </ul>
+</section>
+
+<!-- SECTION 2 -->
+<section>
+    <h2>2. About the College</h2>
+
+    <p><strong>Year of Establishment:</strong> 2005</p>
+
+    <p>
+        The college was established to provide technical education and has grown into
+        a reputed institution known for discipline and academic excellence.
+    </p>
+
+    <p>
+        <strong>Founder / Principal’s Message:</strong><br>
+        Education is the most powerful tool to shape the future. We encourage students
+        to innovate and lead with integrity.
+    </p>
+
+    <ul>
+        <li>Recognized for academic excellence</li>
+        <li>Awarded for quality teaching</li>
+        <li>Strong placement support</li>
+    </ul>
+</section>
+
+<!-- SECTION 3 -->
+<section>
+    <h2>3. Departments & Academics</h2>
+
+    <h3>Departments Offered</h3>
+    <ul>
+        <li>Computer Science Engineering</li>
+        <li>Information Science Engineering</li>
+        <li>Electronics & Communication Engineering</li>
+        <li>Mechanical Engineering</li>
+        <li>Civil Engineering</li>
+    </ul>
+
+    <h3>Facilities</h3>
+    <ul>
+        <li>Modern Laboratories</li>
+        <li>Digital Library</li>
+        <li>Hostel Facilities</li>
+        <li>Sports Ground</li>
+    </ul>
+
+    <h3>Faculty Details</h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th>Experience</th>
+        </tr>
+        <tr>
+            <td>Dr. Anil Kumar</td>
+            <td>CSE</td>
+            <td>Professor</td>
+            <td>15 Years</td>
+        </tr>
+        <tr>
+            <td>Ms. Priya Sharma</td>
+            <td>ISE</td>
+            <td>Associate Professor</td>
+            <td>10 Years</td>
+        </tr>
+    </table>
+</section>
+
+<!-- SECTION 4 -->
+<section>
+    <h2>4. Admission Information</h2>
+
+    <form>
+        <label>Student Name:</label>
+        <input type="text">
+
+        <label>Email Address:</label>
+        <input type="email">
+
+        <label>Phone Number:</label>
+        <input type="tel">
+
+        <label>Course Selection:</label>
+        <select>
+            <option>CSE</option>
+            <option>ISE</option>
+            <option>ECE</option>
+            <option>ME</option>
+            <option>CE</option>
+        </select>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other<br><br>
+
+        <label>Skills / Interests:</label><br>
+        <input type="checkbox"> Programming
+        <input type="checkbox"> Sports
+        <input type="checkbox"> Music<br><br>
+
+        <label>Date of Application:</label>
+        <input type="date">
+
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<!-- SECTION 5 -->
+<section>
+    <h2>5. Campus Gallery</h2>
+
+    <div class="gallery">
+        <figure>
+            <img src="campus1.jpg">
+            <figcaption>Main Building</figcaption>
+        </figure>
+
+        <figure>
+            <img src="campus2.jpg">
+            <figcaption>Library</figcaption>
+        </figure>
+
+        <figure>
+            <img src="campus3.jpg">
+            <figcaption>Sports Ground</figcaption>
+        </figure>
+    </div>
+
+    <h3>Promotional Video</h3>
+    <video controls>
+        <source src="college_video.mp4" type="video/mp4">
+    </video>
+
+    <h3>College Audio</h3>
+    <audio controls>
+        <source src="college_audio.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+</body>
+</html>

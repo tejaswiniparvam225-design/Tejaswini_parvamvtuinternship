@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       li:first-child{
+            color:blue;
+            font-size: 20px;
+        }
+        li:last-child{
+            color:red;
+            font-size: 20px;
+        }
+        li:nth-child(2){
+            color: aqua;
+        }
+        /* for even */
+        li:nth-child(2n){
+            color: brown;
+        }
+        /* for odd */
+         li:nth-child(2n+1){
+            color: red;
+        }
+        /* pseudo elements */
+        h1::first-letter{
+            color: red;
+        }
+        div{
+            border:1px solid black;
+        }
+        h1:first-of-type{
+            background-color: black;
+            color: white;
+        }
+        h1:last-of-type{
+            background-color: yellowgreen;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>list items</h1>
+    <ul>
+        
+        <li>list items1</li>
+        <li>list items2</li>
+        <li>list items3</li>
+        <li>list items4</li>
+        <li>list items5</li>
+        <li>list items6</li>
+        <li>list items7</li>
+        <li>list items8</li>
+        <li>list items9</li>
+        <li>list items10</li>
+    </ul>
+    <div>
+        <h1>heading with in  div</h1>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, assumenda!</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, delectus!</p>
+       <h1>last heading</h1>
+       
+       
+        </div>
+
+</body>
+</html>

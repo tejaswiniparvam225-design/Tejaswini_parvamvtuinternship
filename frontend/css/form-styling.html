@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .btn {
+            margin-top: 15px;
+            width: 48%;
+            padding: 8px;
+        }
+        input:in-range{
+            border:10px solid green;
+            background-color: red;
+            color:blue
+        }
+        input:out-range{
+            border:10px solid orange;
+            background-color: rgb(255, 0, 217);
+            color:violet
+        }
+        input:required{
+            border: 2px solid lightcoral;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+
+    <form>
+        <label>First Name:</label>
+        <input type="text" name="fname" required>
+
+        <label>Last Name:</label>
+        <input type="text" name="lname" required>
+
+        <label>age:</label>
+        <input type="text" name="age" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Password:</label>
+        <input type="password" name="password" required>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+
+        <label>Course:</label>
+        <select>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+        </select>
+
+        <label>
+            <input type="checkbox"> I agree to terms
+        </label>
+
+        <input type="submit" value="Submit" class="btn">
+        <input type="reset" value="Reset" class="btn">
+    </form>
+</div>
+
+</body>
+</html>

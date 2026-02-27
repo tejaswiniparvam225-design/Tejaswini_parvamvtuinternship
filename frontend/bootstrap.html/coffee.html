@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Bliss</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    scroll-behavior:smooth;
+}
+
+/* Navbar */
+header{
+    background:#3e2723;
+    padding:15px 50px;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#fff;
+    font-size:24px;
+    text-decoration:none;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.nav-links a:hover{
+    color:#ffcc80;
+}
+
+/* Hero */
+#home{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1509042239860-f550ce710b93") no-repeat center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding-top:70px;
+}
+
+.hero-content h1{
+    font-size:50px;
+}
+
+/* About */
+#about{
+    padding:80px 50px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    align-items:center;
+}
+
+#about img{
+    width:400px;
+    border-radius:10px;
+}
+
+.about-text{
+    flex:1;
+}
+
+/* Menu */
+#menu{
+    background:#f5f5f5;
+    padding:80px 50px;
+    text-align:center;
+}
+
+.menu-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
+.menu-item{
+    width:280px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.menu-item:hover{
+    transform:scale(1.05);
+}
+
+.menu-item img{
+    width:100%;
+    border-radius:10px;
+}
+
+.price{
+    color:#6d4c41;
+    font-weight:bold;
+}
+
+/* Testimonials */
+#testimonials{
+    padding:80px 50px;
+    background:#fff3e0;
+    text-align:center;
+}
+
+.testimonial-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
+.testimonial-box{
+    width:300px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stars{
+    color:#ff9800;
+    margin:10px 0;
+}
+
+/* Contact */
+#contact{
+    padding:80px 20px;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+.contact-container{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.contact-form{
+    width:400px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-box i{
+    position:absolute;
+    left:10px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#6d4c41;
+}
+
+.input-box input,
+.input-box textarea{
+    width:100%;
+    padding:12px 12px 12px 35px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
+}
+
+.input-box input:focus,
+.input-box textarea:focus{
+    border-color:#6d4c41;
+}
+
+.contact-form button{
+    width:100%;
+    padding:12px;
+    background:#3e2723;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:#5d4037;
+}
+
+/* Footer */
+footer{
+    background:#3e2723;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.social-icons i{
+    font-size:22px;
+    margin:0 12px;
+    cursor:pointer;
+}
+
+.social-icons i:hover{
+    color:#ffcc80;
+}
+
+/* WhatsApp Button */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:24px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp:hover{
+    background:#1ebe5d;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    #about{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+<a href="#" class="logo"><i class="fa-solid fa-mug-hot"></i> Coffee Bliss</a>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home">
+<div class="hero-content">
+<h1>Freshly Brewed Happiness ☕</h1>
+<p>Premium Taste | Cozy Atmosphere | Perfect Moments</p>
+</div>
+</section>
+
+<section id="about">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+<div class="about-text">
+<h2>About Us</h2>
+<p>We craft every cup with passion and premium beans sourced from the best farms.</p>
+</div>
+</section>
+
+<section id="menu">
+<h2>Our Special Menu</h2>
+<div class="menu-container">
+
+<div class="menu-item">
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+<h3>Espresso</h3>
+<p class="price">₹120</p>
+</div>
+
+<div class="menu-item">
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735">
+<h3>Cappuccino</h3>
+<p class="price">₹180</p>
+</div>
+
+<div class="menu-item">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+<h3>Latte</h3>
+<p class="price">₹160</p>
+</div>
+
+<div class="menu-item">
+<img src="https://images.unsplash.com/photo-1521302080370-3c9cfa8b0f13">
+<h3>Mocha</h3>
+<p class="price">₹200</p>
+</div>
+
+<div class="menu-item">
+<img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187">
+<h3>Cold Coffee</h3>
+<p class="price">₹150</p>
+</div>
+
+<div class="menu-item">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+<h3>Brownie + Coffee Combo</h3>
+<p class="price">₹250</p>
+</div>
+
+</div>
+</section>
+
+<section id="testimonials">
+<h2>What Our Customers Say</h2>
+<div class="testimonial-container">
+
+<div class="testimonial-box">
+<p>Best coffee in Bangalore!</p>
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<h4>- Priya</h4>
+</div>
+
+<div class="testimonial-box">
+<p>Highly recommended for coffee lovers!</p>
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<h4>- Rahul</h4>
+</div>
+
+<div class="testimonial-box">
+<p>Very cozy and peaceful place.</p>
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<h4>- Sneha</h4>
+</div>
+
+<div class="testimonial-box">
+<p>Amazing customer service!</p>
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<h4>- Arjun</h4>
+</div>
+
+<div class="testimonial-box">
+<p>Perfect weekend coffee spot.</p>
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<h4>- Meera</h4>
+</div>
+
+<div class="testimonial-box">
+<p>Highly recommended for coffee lovers!</p>
+<div class="stars">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+<h4>- Kiran</h4>
+</div>
+
+
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<div class="contact-container">
+<form onsubmit="showMessage(event)" class="contact-form">
+
+<div class="input-box">
+<i class="fa-solid fa-user"></i>
+<input type="text" placeholder="Your Name" required>
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-envelope"></i>
+<input type="email" placeholder="Your Email" required>
+</div>
+
+<div class="input-box">
+<i class="fa-solid fa-message"></i>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+</div>
+
+<button type="submit">
+<i class="fa-solid fa-paper-plane"></i> Send Message
+</button>
+
+</form>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Coffee Bliss | All Rights Reserved</p>
+<div class="social-icons">
+<i class="fa-brands fa-whatsapp"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-twitter"></i>
+</div>
+</footer>
+
+<a href="#" class="whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+function showMessage(event){
+event.preventDefault();
+alert("Thank you! Your message has been sent successfully ☕");
+}
+</script>
+
+</body>
+</html>

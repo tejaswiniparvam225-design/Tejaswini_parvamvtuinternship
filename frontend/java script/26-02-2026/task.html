@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Result Management System</h1>
+    <button onclick="showResults()">Show Results</button>
+
+    <pre id="output"></pre>
+    <script>
+
+const students = [
+    { id: 1, name: "Rahul", marks: [80, 75, 90] },
+    { id: 2, name: "Sneha", marks: [60, 70, 65] },
+    { id: 3, name: "Arjun", marks: [95, 92, 88] }
+];
+
+function calculateTotal(marksArray) {
+    return marksArray.reduce((total, mark) => total + mark, 0);
+}
+
+const calculateGrade = (average) => {
+    if (average >= 90) return "A";
+    else if (average >= 75) return "B";
+    else if (average >= 60) return "C";
+    else return "Fail";
+};
+
+function showResults() {
+
+    console.clear(); // optional
+
+    const resultData = students.map(student => {
+        const total = calculateTotal(student.marks);
+        const average = total / student.marks.length;
+        const grade = calculateGrade(average);
+
+        return {
+            name: student.name,
+            total,
+            average: average.toFixed(2),
+            grade
+        };
+    });
+
+    console.log("All Students:");
+    resultData.forEach(student => {
+        console.log(
+            `Name: ${student.name}, Total: ${student.total}, Average: ${student.average}, Grade: ${student.grade}`
+        );
+    });
+
+    const topStudents = resultData.filter(student => student.average > 75);
+
+    console.log("\nStudents with Average > 75:");
+    topStudents.forEach(student => {
+        console.log(`${student.name} (${student.average})`);
+    });
+
+    // Scope Example
+    function testScope() {
+        var a = "var variable";
+        let b = "let variable";
+
+        if (true) {
+            var a = "var changed inside block";
+            console.log("\nInside Block:", a);
+        }
+
+        console.log("Outside Block (var):", a);
+        console.log("Outside Block (let):", b);
+    }
+
+    testScope();
+
+    // Primitive Example
+    let num1 = 10;
+    let num2 = num1;
+    num2 = 20;
+
+    console.log("\nPrimitive Example:");
+    console.log("num1 =", num1);
+    console.log("num2 =", num2);
+
+    // Reference Example
+    let arr1 = [1,2,3];
+    let arr2 = arr1;
+    arr2.push(4);
+
+    console.log("\nReference Example:");
+    console.log("arr1 =", arr1);
+    console.log("arr2 =", arr2);
+}
+
+</script>
+</body>
+</html>

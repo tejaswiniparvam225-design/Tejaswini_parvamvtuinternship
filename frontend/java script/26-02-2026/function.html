@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>function in js</h1>
+    <p>1.function decleration</p>
+    <pre>
+        function fun_name(parameters){
+            //code
+        }
+        fun_name(args);
+    </pre>
+    <P2>2.function expression</P2>
+    <pre>
+        const fun_name=function(parameters){
+            //code
+        }
+         fun_name(args);
+
+    </pre>
+     <P2>3. arrow function </P2>
+    <pre>
+        const fun_name=function(parameters) =>{
+            //code
+        }
+         fun_name(args);
+
+    </pre>
+    <pre>
+        1.function taking parameters and returning value(1,1)
+        2.function taking parameters and not returning value(1,0)
+        3.function  not taking parameters and returning value(0,1)
+        4.function not taking parameters and not returning value(1,1)
+    </pre>
+
+    <script>   
+        const add=function(a,b){
+            return a+b;
+        }
+        const res=add(10,20);
+        console.log("add:",res);
+
+        const sub=function(a,b){
+        console.log("sub:",(a-b));
+        }
+        sub(20,30);
+
+        const mul=function(a,b){
+            return a*b;
+        }
+        const res1=mul();
+        console.log("mul:",res1);
+
+        const div=function(){
+            console.log("div:",10/2)
+        }
+        div();
+
+    </script>
+</body>
+</html>

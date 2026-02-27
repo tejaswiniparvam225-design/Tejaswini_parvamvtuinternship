@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JS</title>
+</head>
+<body>
+    <h1>Loops in JS</h1>
+
+    <p>1. for loop - if we know the number of iterations</p>
+    <p>2. while loop - if we don't know the number of iterations (pre-check)</p>
+    <p>3. do-while loop - if we don't know the number of iterations (post-check)</p>
+    <p>4. for-of loop - to traverse an array</p>
+    <p>5. for-in loop - to get the keys of an object</p>
+
+    <script>
+        // for loop example
+        let i = 5;
+
+        for (let j = 1; j <= 10; j++) {
+            console.log(i, "*", j, "=", i * j);
+        }
+
+        //for of loop
+        const arr=[10,20,30,40,50];
+        for(let value of arr){
+            console.log(value);
+        }
+
+        //for in loop
+        const student={
+            "firstname":"raj",
+            "age":20
+        }
+        for(let key in student){
+            console.log('${key}:${student[key]}')
+        }
+    </script>
+</body>
+</html>

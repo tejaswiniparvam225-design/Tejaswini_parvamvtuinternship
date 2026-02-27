@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1e26ebbc18.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* HEADER - position: sticky */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgb(104, 116, 129);
+            color: aqua;
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        h2 {
+            position: relative;
+            color: #0f5397;
+        }
+
+        /* Department - display: block */
+        .dept {
+            display: block;
+            width: 300px;
+            margin: 5px 0;
+            background-color: #e3f2fd;
+            padding: 5px;
+        }
+
+        /* Facilities - display: inline */
+        .facility {
+            display: inline;
+            margin-right: 8px;
+        }
+
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* FORM */
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* GALLERY - display: flex */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        /* ICON BOX - position: fixed */
+        .icon-box {
+            position: fixed;
+            right: 10px;
+            bottom: 100px;
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .icon-box span {
+            display: block;
+            margin: 5px 0;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Government Engineering College</h1>
+    <p>Kushalnagar – 571234</p>
+</header>
+
+<!-- SECTION 1 -->
+<h2>Welcome</h2>
+<p>Welcome to Government Engineering College, Kushalnagar — where knowledge meets innovation.</p>
+
+<!-- SECTION 3 -->
+<h3>Departments</h3>
+<span class="dept">CSE</span>
+<span class="dept">ECE</span>
+<span class="dept">ME</span>
+<span class="dept">Civil</span>
+
+<h3>Facilities</h3>
+<div class="facility">Hostel,</div>
+<div class="facility">Library,</div>
+<div class="facility">Quality Education,</div>
+<div class="facility">Sports</div>
+
+<!-- FACULTY TABLE -->
+<section>
+    <h2>Faculty Table</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Department</th>
+        </tr>
+        <tr>
+            <td>Dr. Ranganath</td>
+            <td>HOD</td>
+            <td>CSE</td>
+        </tr>
+    </table>
+</section>
+
+<!-- ADMISSION FORM -->
+<section>
+    <h2>Admission Form</h2>
+    <form>
+        <label>Name</label>
+        <input type="text">
+
+        <label>Email</label>
+        <input type="email">
+
+        <label>Course</label>
+        <select>
+            <option>CSE</option>
+            <option>ECE</option>
+        </select>
+
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<!-- GALLERY -->
+<section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="../task/geck1.jpg" width="300">
+        <img src="../task/geck2.jpg" width="300">
+        <img src="../task/campus.jpg" width="300">
+    </div>
+</section>
+
+<!-- FIXED ICONS -->
+<div class="icon-box">
+    <span><i class="fa-brands fa-facebook"></i></span>
+    <span><i class="fa-solid fa-envelope"></i></span>
+    <span><i class="fa-solid fa-phone"></i></span>
+    <span><i class="fa-solid fa-location-dot"></i></span>
+</div>
+
+</body>
+</html>
