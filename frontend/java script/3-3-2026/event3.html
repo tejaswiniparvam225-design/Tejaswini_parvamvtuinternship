@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="contact-form">
+        <label for="name">name</label>
+        <input type="text" name="name" id="name"><br>
+
+         <label for="email">email</label>
+        <input type="email" name="email" id="email"><br>
+
+        <label>gender:</label><br>
+        <label for="male">male</label>
+        <innput type="radio"  name="gender" id="male" value="male"/>
+        <label for="female">female</label>
+        <innput type="radio"  name="gender" id="female" value="female"/><br>
+
+        <label for="city">city</label>
+        <select name="city" id="city">
+            <option value="bengaluru">bengaluru</option>
+             <option value="tumkuru">tumkuru</option>
+        </select><br>
+        <button type="submit">submit</button>
+
+
+
+
+    </form>
+
+    <script>
+        const name=document.getElementById("name");
+        name.addEventlistener("input",(event)=>{
+            console.log(event.target.value);
+        })
+    </script>
+</body>
+</html>
